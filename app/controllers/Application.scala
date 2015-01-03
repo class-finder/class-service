@@ -8,7 +8,7 @@ import play.api.libs.json.{JsValue, Json}
 
 object Application extends Controller {
 
-  def index = Action {
+  def indexEvents = Action {
     val events = Event.all
 
     Ok(Json.toJson(events))
