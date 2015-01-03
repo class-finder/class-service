@@ -1,5 +1,6 @@
 package controllers
 
+import controllers.response.DataResponse
 import models.Event
 
 import play.api._
@@ -11,7 +12,7 @@ object Application extends Controller {
   def indexEvents = Action {
     val events = Event.all
 
-    Ok(Json.toJson(events))
+    Ok(Json.toJson(DataResponse(events)))
   }
 
 }
